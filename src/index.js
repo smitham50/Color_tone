@@ -3,7 +3,7 @@ let bassSynth
 
 const button = document.querySelector('button')
 
-button.addEventListener('click', setup())
+button.addEventListener('click', () => setup())
 
 function setup() {
 
@@ -12,6 +12,8 @@ function setup() {
   bassSynth = new Tone.MembraneSynth().toMaster()
 
   loopBeat = new Tone.Loop(song, "4n")
+ 
+  Tone.Transport.bpm.value = 100
   Tone.Transport.start()
   loopBeat.start(0)
 }
