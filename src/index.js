@@ -37,14 +37,17 @@ function randomNote(notesArray, octaveArray) {
 
   if (noteIndex === 0) {
     body.style.background = 'red'
+    button.style.transform = "scale(1.2)"
   } else if (noteIndex === 1) {
     body.style.background = 'yellow'
+    button.style.transform = "scale(1.4)"
   } else if (noteIndex === 2) {
     body.style.background = 'turquoise'
   } else if (noteIndex === 3) {
     body.style.background = 'orchard'
   } else if (noteIndex === 4) {
     body.style.background = 'orange'
+    button.style.transform = "scale(1.6)"
   } else if (noteIndex === 5) {
     body.style.background = 'pink'
   }
