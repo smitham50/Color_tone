@@ -15,3 +15,7 @@ body {
   text-align: center;
   background: blue;
 }
+
+button:focus { 
+  outline: none; 
+}
