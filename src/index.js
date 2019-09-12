@@ -1,6 +1,5 @@
 let loopBeat
 let synth
-let filter
 
 const body = document.querySelector('body')
 const button = document.querySelector('button')
@@ -14,11 +13,6 @@ const durations = ['2', '4', '8', '16']
 
 function setup() {
   synth = new Tone.Synth().toMaster()
-  // filter = new Tone.Filter({
-  //   type: 'lowpass',
-  //   frequency: 350,
-  //   rolloff: -12
-  // })
   loopBeat = new Tone.Loop(song, "4n")
  
   Tone.Transport.bpm.value = 300
