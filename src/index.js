@@ -6,7 +6,7 @@ const button = document.querySelector('button')
 
 button.addEventListener('click', () => setup())
 
-const notes = ['a', 'c', 'e', 'd', 'f']
+const notes = ['ab', 'g', 'eb', 'db', 'bb', 'c']
 const octaves = ['1', '2', '3', '4', '5']
 const durations = ['2', '4', '8', '16']
 
