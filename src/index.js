@@ -1,6 +1,7 @@
 let loopBeat
 let synth
 let mono
+let randomizer
 
 const body = document.querySelector('body')
 const button = document.querySelector('button')
@@ -22,7 +23,7 @@ function setup() {
 
   mono = new Tone.MonoSynth({
     "oscillator": {
-      "type": "triangle"
+      "type": "sine"
     },
     "filter": {
       "frequency": 300,
@@ -53,11 +54,18 @@ function song(time) {
 function randomNote(notesArray, octaveArray) {
   let noteIndex = Math.floor(Math.random() * 5)
   let octaveIndex = Math.floor(Math.random() * 5)
+  let binary = Math.floor(Math.random() * 2)
+  
+  if (binary === 0) {
+    randomizer = false
+  } else if (binary === 1) {
+    randomizer = true
+  }
 
-  if (noteIndex === 0) {
+  if (noteIndex === 0) {  
     body.style.background = 'red'
     button.style.transform = "scale(1.2)"
-    triggerMono(`${monoNotes[2]}${octaveArray[octaveIndex]}`)
+    triggerMono(randomizer ? `${monoNotes[2]}${octaveArray[octaveIndex]}` : `${monoNotes[1]}${octaveArray[octaveIndex]}`)
   } else if (noteIndex === 1) {
     body.style.background = 'yellow'
     button.style.transform = "scale(1.4)"
