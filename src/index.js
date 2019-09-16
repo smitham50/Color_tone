@@ -76,9 +76,9 @@ function randomNote(notesArray, octaveArray) {
   } else if (noteIndex === 4) {
     body.style.background = 'orange'
     button.style.transform = "scale(1.6)"
+    triggerMono(randomizer ? `${monoNotes[0]}${octaveArray[octaveIndex]}` : `${monoNotes[1]}${octaveArray[octaveIndex]}`)
   } else if (noteIndex === 5) {
     body.style.background = 'pink'
-    triggerMono(`${monoNotes[0]}${octaveArray[octaveIndex]}`)
   }
 
   return `${notesArray[noteIndex]}${octaveArray[octaveIndex]}`
