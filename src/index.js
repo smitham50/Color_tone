@@ -52,7 +52,7 @@ function song(time) {
 }
 
 function randomNote(notesArray, octaveArray) {
-  let noteIndex = Math.floor(Math.random() * 5)
+  let noteIndex = Math.floor(Math.random() * 6)
   let octaveIndex = Math.floor(Math.random() * 5)
   let binary = Math.floor(Math.random() * 2)
   
@@ -78,7 +78,7 @@ function randomNote(notesArray, octaveArray) {
     button.style.transform = "scale(1.6)"
     triggerMono(randomizer ? `${monoNotes[0]}${octaveArray[octaveIndex]}` : `${monoNotes[1]}${octaveArray[octaveIndex]}`)
   } else if (noteIndex === 5) {
-    body.style.background = 'pink'
+    body.style.background = '#ff00ce'
   }
 
   return `${notesArray[noteIndex]}${octaveArray[octaveIndex]}`
