@@ -5,6 +5,7 @@ let randomizer
 
 const body = document.querySelector('body')
 const button = document.querySelector('button')
+const moon1 = document.querySelector('#moon-1')
 
 button.addEventListener('click', () => setup())
 
@@ -66,13 +67,25 @@ function randomNote(notesArray, octaveArray) {
     body.style.background = 'red'
     button.style.transform = "scale(1.2)"
     triggerMono(randomizer ? `${monoNotes[2]}${octaveArray[octaveIndex]}` : `${monoNotes[1]}${octaveArray[octaveIndex]}`)
+    moon1.style.boxShadow = '6px 6px 0 0 #ff00ce'
+    moon1.style.transform = `rotate(${octaveIndex * 7}deg)`
+    moon1.style.marginLeft = `${octaveIndex * 60}px`
+    moon1.style.transform = "scale(.8)"
   } else if (noteIndex === 1) {
     body.style.background = 'yellow'
     button.style.transform = "scale(1.4)"
+    moon1.style.boxShadow = '7px 7px 0 0 turquoise'
+    moon1.style.transform = `rotate(${octaveIndex * 8}deg)`
+    moon1.style.marginBottom = `${octaveIndex * 60}px`
+    moon1.style.transform = "scale(1.5)"
   } else if (noteIndex === 2) {
     body.style.background = 'turquoise'
   } else if (noteIndex === 3) {
     body.style.background = 'orchard'
+    moon1.style.boxShadow = '5px 5px 0 0 yellow'
+    moon1.style.transform = `rotate(${binary * 30}deg)`
+    moon1.style.marginTop = `${octaveIndex * 40}px`
+    moon1.style.transform = "scale(1.3)"
   } else if (noteIndex === 4) {
     body.style.background = 'orange'
     button.style.transform = "scale(1.6)"

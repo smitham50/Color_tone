@@ -19,3 +19,24 @@ body {
 button:focus { 
   outline: none; 
 }
+
+#moon-1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 7px 7px 0 0 red;
+  margin-left: 100px;
+  position: relative;
+}
+
+/* #circle-1 {
+  width: 50px;
+  height: 50px;
+  background: yellow;
+  border-radius: 50%;
+  margin-left: 80%;
+  margin-bottom: 60%;
+  position: relative;
+} */
+
+ 
